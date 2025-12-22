@@ -2,6 +2,8 @@ fastapi
 uvicorn[standard]
 python-multipart
 
-torch==2.1.0
-torchaudio==2.1.0
+torch==2.1.2
+torchaudio==2.1.2
+transformers==4.38.2
+
 TTS==0.22.0
