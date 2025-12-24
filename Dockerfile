@@ -2,6 +2,7 @@ FROM python:3.10-slim
 
 ENV COQUI_TOS_AGREED=1
 ENV PYTHONUNBUFFERED=1
+ENV PORT=8000
 
 # System deps needed by TTS
 RUN apt-get update && apt-get install -y \
@@ -21,4 +22,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "$PORT"]
